@@ -14,7 +14,7 @@ function onFormSubmit(event) {
     message: formRef.elements.message.value,
   };
 
-  if (formInputs.email === '' || dataInputs.message === '') {
+  if (formInputs.email === '' || formInputs.message === '') {
     alert('Please fill all fileds');
     return;
   }
