@@ -30,14 +30,14 @@ function onInput() {
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(dataToStore));
 }
 
-renderStored = () => {
+function renderStored() {
   const storedData = localStorage.getItem(LOCALSTORAGE_KEY);
   if (storedData) {
     const StoredArr = JSON.parse(storedData);
     formRef.elements.email.value = StoredArr.email;
     formRef.elements.message.value = StoredArr.message;
   }
-};
+}
 
 renderStored();
 
