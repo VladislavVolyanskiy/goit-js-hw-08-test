@@ -6,7 +6,7 @@ const LOCALSTORAGE_KEY = 'feedback-form-state';
 
 let dataToStore = {};
 
-onFormSubmit = event => {
+function onFormSubmit(event) {
   event.preventDefault();
 
   const formInputs = {
@@ -20,7 +20,7 @@ onFormSubmit = event => {
   }
 
   event.currentTarget.reset();
-};
+}
 
 onInput = () => {
   dataToStore = {
