@@ -22,13 +22,13 @@ function onFormSubmit(event) {
   event.currentTarget.reset();
 }
 
-onInput = () => {
+function onInput() {
   dataToStore = {
     email: formRef.elements.email.value,
     message: formRef.elements.message.value,
   };
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(dataToStore));
-};
+}
 
 renderStored = () => {
   const storedData = localStorage.getItem(LOCALSTORAGE_KEY);
